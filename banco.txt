@@ -1,0 +1,17 @@
+CREATE TABLE `cadastro`.`hanseniase` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+	`nome_respon` VARCHAR(100),
+	`tel_respon` VARCHAR(15),
+	`idade_respon` INTEGER,
+	`sexo_respon` VARCHAR(1),
+	`cartao_respon` VARCHAR(20),
+	`mae_respon` VARCHAR(100),
+	`rua_respon` VARCHAR(200),
+	`numero_respon` VARCHAR(10),
+	`bairro_respon` VARCHAR(200),
+	`referencia_respon` VARCHAR(255),
+	`visitador` VARCHAR(100),
+	`renda_respon` VARCHAR(10),
+	`beneficio` VARCHAR(10),
+	`beneficio_descr` VARCHAR(100),
+  PRIMARY KEY (`id`));
