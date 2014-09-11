@@ -1,5 +1,5 @@
 <?php
-include 'conexao.php';
+//include 'conexao.php';
 ?>
 <html>
 <head>
@@ -9,6 +9,7 @@ include 'conexao.php';
 </head>
 <body>
 <div class="row panel">
+<!--
 <form method="post">
 	  <div class="row">
 		<div class="large-12 columns">
@@ -24,7 +25,7 @@ include 'conexao.php';
 		</div>
 	  </div>
 </form>
-
+-->
 <h3 class="text-center">Prevenção de controle da Hanseníase 2014</h3>
 
 <form>
@@ -124,33 +125,52 @@ include 'conexao.php';
 			<div class="large-8 columns"></div>
 		</div>
 	</div>
-
-<?php
-$qtd=0;
-if(isset($_POST['qtd'])){
-$qtd= $_POST['qtd'];
-}
-for ($i=0; $i <$qtd ; $i++) { ?>
-	<div class="alert-box secondary radius">
-		<legend>Familiar <?php echo $i+1 ?></legend>
+<!--
+	<input type="button" onclick="<?php $l=0;?>" value="+Familiar" class="buttonfamiliar" name="buttonfamiliar" />
+	<div class="box2">
+	<div class="box3 alert-box secondary radius">
+	<legend>Familiar</legend>
 		<div class="large-4 columns">
-				<label>Celular<input type="text" name="celular" value="usuario<?php echo $i+1 ?>" /></label>
+				<label class="lab">Celular<input type="text" name="celular" value="usuario" /></label>
 			</div>
 			<div class="large-8 columns"></div>
 		<div class="row">
 			<div class="large-4 columns">
-				<label>Celular<input type="text" name="celular" value="usuario<?php echo $i+1 ?>"/></label>
+				<label>Celular<input type="text" name="celular" value="usuario"/></label>
 			</div>
 			<div class="large-8 columns"></div>
+			<p>TEStes</p>
 		</div>
 	</div>
-<?php } ?>
-quantidade de pessoas na familia é: 
-<?php echo $qtd ?>
+	</div>
+-->
 <br />
 <input class="button [tiny small large] success round" type="submit" value="Salvar">
 </form>
 
+<script src="js/vendor/jquery.js"></script>
+   <script type="text/javascript" language="javascript">
+   
+   $(document).ready(function() {
+
+     $(".buttonfamiliar").click(function () {
+       $('.box2 div.box3').clone().insertAfter('.box2');
+	   $("p").after("<?php for ($j=0; $j<2 ; $j++) { echo $j;} ?> <b><?php echo $j;?></b>");
+    });
+   });
+   </script>
+	
+	   <script type="text/javascript" language="javascript">
+  /* 
+   $(document).ready(function() {
+
+     $(".familiar").click(function () {
+       $(this).clone().insertAfter(this);
+    });
+
+   });
+*/
+   </script>
 <br />
 <br />
 <br />
